@@ -3,6 +3,8 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #151515 !important;
+  color: #fff;
 }
 
 code {
@@ -60,11 +62,6 @@ img {
 main {
   padding: 54px 20%;
   height: 100%;
-}
-
-body {
-  background-color: #151515 !important;
-  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
