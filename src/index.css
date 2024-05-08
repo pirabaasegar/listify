@@ -7,42 +7,8 @@ body {
   color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.btn-primary {
-  --bs-btn-color: #fff !important;
-  --bs-btn-bg: #22c55e !important;
-  --bs-btn-border-color: #22c55e !important;
-  --bs-btn-hover-color: #fff !important;
-  --bs-btn-hover-bg: #22c55e !important;
-  --bs-btn-hover-border-color: #22c55e !important;
-  --bs-btn-focus-shadow-rgb: 26, 26, 26 !important;
-  --bs-btn-active-color: #fff !important;
-  --bs-btn-active-bg: #22c55e !important;
-  --bs-btn-active-border-color: #22c55e !important;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
-  --bs-btn-disabled-color: #fff !important;
-  --bs-btn-disabled-bg: #22c55e !important;
-  --bs-btn-disabled-border-color: #22c55e !important;
-}
-
-blockquote,
-dd,
-dl,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-p,
-pre {
-  margin: 0;
+img {
+  -webkit-user-drag: none;
 }
 
 a {
@@ -52,20 +18,5 @@ a {
 }
 
 a:hover {
-  color: #18181b !important;
-}
-
-img {
-  -webkit-user-drag: none;
-}
-
-main {
-  padding: 54px 20%;
-  height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  main {
-      padding: 25px 15% !important;
-  }
+  color: #22c55e !important;
 }

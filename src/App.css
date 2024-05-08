@@ -1,3 +1,8 @@
+main {
+    padding: 54px 20%;
+    height: 100%;
+}
+
 .navbar-brand {
     font-size: 1.2rem !important;
     color: #22c55e !important;
@@ -41,10 +46,6 @@
     box-shadow: 0 !important;
 }
 
-a:hover {
-    color: #22c55e !important;
-}
-
 .form-check-input:checked:before {
     font-family: "bootstrap-icons";
     content: '\F26E';
@@ -82,12 +83,18 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
+    main {
+        padding: 25px 15% !important;
+    }
+
     .codeContainer {
         width: 86%;
     }
+
     .codeInput {
         width: 88%;
     }
+
     .header {
         padding: 3rem 1.5rem 1.5rem 1.5rem;
     }
