@@ -119,7 +119,7 @@ function App() {
         <div className="container d-flex justify-content-between">
           <div>
             <a className="navbar-brand" href="/">
-              <i className="bi bi-check-lg"></i>todo
+              <i className="bi bi-check-lg"></i>Listify
             </a>
           </div>
           <div>
