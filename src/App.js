@@ -96,7 +96,7 @@ function App() {
       if (error) {
         throw error;
       }
-      fetchTasks(listCode); // Pass the current listCode to fetchTasks
+      fetchTasks(listCode);
     } catch (error) {
       console.error('Error updating task status:', error.message);
     }
@@ -210,6 +210,14 @@ function App() {
           </div>
         </section>
       </main>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        © Copyright <strong><span>Listify</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+        Designed by <a href="https://www.pirabaa.ca/">Pirabaa</a>
+    </div>
+</footer>
     </>
   );
 }
