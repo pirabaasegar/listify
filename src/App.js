@@ -241,11 +241,11 @@ function App() {
           </div>
         </section>
       </main>
-      <footer id="footer" class="footer">
-        <div class="copyright">
+      <footer id="footer" className="footer">
+        <div className="copyright">
           © Copyright <strong><span>Listify</span></strong>. All Rights Reserved
         </div>
-        <div class="credits">
+        <div className="credits">
           Designed by <a href="https://www.pirabaa.ca/">Pirabaa</a>
         </div>
       </footer>
