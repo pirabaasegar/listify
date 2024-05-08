@@ -133,7 +133,7 @@ function App() {
               <i className="bi bi-check-lg"></i>Listify
             </a>
           </div>
-          <div>
+          <div className='codeContainer'>
             <input
               ref={codeInputRef}
               className='codeInput'
