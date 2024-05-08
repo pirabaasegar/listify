@@ -12,19 +12,19 @@ code {
 
 .btn-primary {
   --bs-btn-color: #fff !important;
-  --bs-btn-bg: #dc4c3e !important;
-  --bs-btn-border-color: #dc4c3e !important;
+  --bs-btn-bg: #22c55e !important;
+  --bs-btn-border-color: #22c55e !important;
   --bs-btn-hover-color: #fff !important;
-  --bs-btn-hover-bg: #dc4c3e !important;
-  --bs-btn-hover-border-color: #dc4c3e !important;
+  --bs-btn-hover-bg: #22c55e !important;
+  --bs-btn-hover-border-color: #22c55e !important;
   --bs-btn-focus-shadow-rgb: 26, 26, 26 !important;
   --bs-btn-active-color: #fff !important;
-  --bs-btn-active-bg: #dc4c3e !important;
-  --bs-btn-active-border-color: #dc4c3e !important;
+  --bs-btn-active-bg: #22c55e !important;
+  --bs-btn-active-border-color: #22c55e !important;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
   --bs-btn-disabled-color: #fff !important;
-  --bs-btn-disabled-bg: #dc4c3e !important;
-  --bs-btn-disabled-border-color: #dc4c3e !important;
+  --bs-btn-disabled-bg: #22c55e !important;
+  --bs-btn-disabled-border-color: #22c55e !important;
 }
 
 blockquote,
@@ -58,11 +58,11 @@ img {
 }
 
 main {
-  padding: 55px 100px;
-  height: 100vh;
-  width: 100%;
+  padding: 54px 20%;
+  height: 100%;
 }
 
 body {
-  color: #202020;
+  background-color: #151515 !important;
+  color: #fff;
 }
