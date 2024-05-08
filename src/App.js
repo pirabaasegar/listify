@@ -34,13 +34,13 @@ function App() {
     } catch (error) {
       console.error('Error fetching tasks:', error.message);
     }
-  };  
+  };
 
   const handleListCodeChange = (event) => {
     const newListCode = event.target.value;
     setListCode(newListCode);
     fetchTasks(newListCode);
-  };  
+  };
 
   const handleTaskInputChange = (event) => {
     setTaskInput(event.target.value);
@@ -54,7 +54,7 @@ function App() {
           newListCode = generateListCode();
           setListCode(newListCode);
         }
-        
+
         const { data, error } = await supabase
           .from('todos')
           .insert([{ task: taskInput, list_code: listCode || newListCode, status: 'uncomplete' }]);
@@ -67,7 +67,7 @@ function App() {
         console.error('Error creating task:', error.message);
       }
     }
-  };   
+  };
 
   const formatDate = (dateString) => {
     const currentDate = new Date();
@@ -111,6 +111,17 @@ function App() {
     const min = 10000000;
     const max = 99999999;
     return String(Math.floor(Math.random() * (max - min + 1)) + min);
+  };
+
+  const [sampleTasks, setSampleTasks] = useState([
+    { id: 1, task: 'Go buy groceries', due_date: 'Mar 12' },
+    { id: 2, task: 'Clean room', due_date: 'Mar 19' },
+    { id: 3, task: 'Finish essay', due_date: 'Mar 22' }
+  ]);
+
+  const handleDeleteSampleTask = (taskId) => {
+    const updatedSampleTasks = sampleTasks.filter(task => task.id !== taskId);
+    setSampleTasks(updatedSampleTasks);
   };
 
   return (
@@ -159,22 +170,42 @@ function App() {
           </div>
           <div className="section-body mt-3">
             <ul className="list-group gap-3">
-              {tasks.map(task => (
-                <li key={task.id} className="list-group-item d-flex align-items-center justify-content-between">
-                  <div className='d-flex'>
-                    <div className="form-check me-2">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        onChange={() => handleTaskCheck(task.id, 'uncomplete')}
-                        checked={false}
-                      />
+              {tasks.length > 0 ? (
+                tasks.map(task => (
+                  <li key={task.id} className="list-group-item d-flex align-items-center justify-content-between">
+                    <div className='d-flex'>
+                      <div className="form-check me-2">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          onChange={() => handleTaskCheck(task.id, 'uncomplete')}
+                          checked={false}
+                        />
+                      </div>
+                      <span>{task.task}</span>
                     </div>
-                    <span>{task.task}</span>
-                  </div>
-                  <span className='text-secondary'>{formatDate(task.due_date)}</span>
-                </li>
-              ))}
+                    <span className='text-secondary'>{formatDate(task.due_date)}</span>
+                  </li>
+                ))
+              ) : (
+                <>
+                  {sampleTasks.map(sampleTask => (
+                    <li key={sampleTask.id} className="list-group-item d-flex align-items-center justify-content-between">
+                      <div className='d-flex'>
+                        <div className="form-check me-2">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            onChange={() => handleDeleteSampleTask(sampleTask.id)}
+                          />
+                        </div>
+                        <span>{sampleTask.task}</span>
+                      </div>
+                      <span className='text-secondary'>{formatDate(sampleTask.due_date)}</span>
+                    </li>
+                  ))}
+                </>
+              )}
             </ul>
           </div>
         </section>
@@ -211,13 +242,13 @@ function App() {
         </section>
       </main>
       <footer id="footer" class="footer">
-    <div class="copyright">
-        © Copyright <strong><span>Listify</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-        Designed by <a href="https://www.pirabaa.ca/">Pirabaa</a>
-    </div>
-</footer>
+        <div class="copyright">
+          © Copyright <strong><span>Listify</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://www.pirabaa.ca/">Pirabaa</a>
+        </div>
+      </footer>
     </>
   );
 }
