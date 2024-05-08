@@ -79,7 +79,7 @@ a:hover {
     border: 0;
     border-bottom: 1px solid #5ec660;
     margin-right: 1rem;
-    border-radius: none !important;
+    border-radius: 0 !important;
 }
 
 .codeInput:focus {
@@ -114,5 +114,10 @@ a:hover {
 @media screen and (max-width: 768px) {
     main {
         padding: 54px 15%;
+    }
+    header .container {
+        align-items: center !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
     }
 }
