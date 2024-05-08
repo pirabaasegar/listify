@@ -66,3 +66,9 @@ body {
   background-color: #151515 !important;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+      padding: 25px 15% !important;
+  }
+}

@@ -126,17 +126,17 @@ function App() {
 
   return (
     <>
-      <header className="header" id="header">
-        <div className="container d-flex justify-content-between">
+      <header className="header p-md-4" id="header">
+        <div className="container d-flex justify-content-between gap-3 gap-md-0 align-items-center align-items-md-start flex-column flex-md-row">
           <div>
-            <a className="navbar-brand" href="/">
+            <a className="navbar-brand fw-bold" href="/">
               <i className="bi bi-check-lg"></i>Listify
             </a>
           </div>
           <div className='codeContainer'>
             <input
               ref={codeInputRef}
-              className='codeInput'
+              className='codeInput bg-transparent me-3 shadow-none'
               type='text'
               placeholder='Enter Your Code'
               value={listCode}
@@ -150,13 +150,13 @@ function App() {
         <div className="input-container">
           <input
             type="text"
-            className="form-control mb-2"
+            className="form-control mb-2 bg-transparent"
             placeholder="Search for or add Todo"
             value={taskInput}
             onChange={handleTaskInputChange}
             onKeyPress={handleTaskCreate}
           />
-          <i className="bi bi-plus-lg" />
+          <i className="bi bi-plus-lg position-absolute border-0 p-0 m-0 bg-transparent " />
         </div>
         <section className="uncomplete mt-5">
           <div className="section-header d-flex justify-content-between border-bottom border-secondary-subtle pb-2">
@@ -172,11 +172,11 @@ function App() {
             <ul className="list-group gap-3">
               {tasks.length > 0 ? (
                 tasks.map(task => (
-                  <li key={task.id} className="list-group-item d-flex align-items-center justify-content-between">
+                  <li key={task.id} className="list-group-item d-flex align-items-center justify-content-between bg-transparent border-0 p-0">
                     <div className='d-flex'>
                       <div className="form-check me-2">
                         <input
-                          className="form-check-input"
+                          className="form-check-input position-relative rounded-circle"
                           type="checkbox"
                           onChange={() => handleTaskCheck(task.id, 'uncomplete')}
                           checked={false}
@@ -190,11 +190,11 @@ function App() {
               ) : (
                 <>
                   {sampleTasks.map(sampleTask => (
-                    <li key={sampleTask.id} className="list-group-item d-flex align-items-center justify-content-between">
+                    <li key={sampleTask.id} className="list-group-item d-flex align-items-center justify-content-between bg-transparent border-0 p-0">
                       <div className='d-flex'>
                         <div className="form-check me-2">
                           <input
-                            className="form-check-input"
+                            className="form-check-input position-relative rounded-circle"
                             type="checkbox"
                             onChange={() => handleDeleteSampleTask(sampleTask.id)}
                           />
@@ -222,11 +222,11 @@ function App() {
           <div className="section-body mt-3">
             <ul className="list-group gap-3">
               {completedTasks.map(task => (
-                <li key={task.id} className="list-group-item d-flex align-items-center justify-content-between">
+                <li key={task.id} className="list-group-item d-flex align-items-center justify-content-between bg-transparent border-0 p-0">
                   <div className='d-flex'>
                     <div className="form-check me-2">
                       <input
-                        className="form-check-input"
+                        className="form-check-input position-relative rounded-circle"
                         type="checkbox"
                         onChange={() => handleTaskCheck(task.id, 'completed')}
                         checked={true}
@@ -241,11 +241,11 @@ function App() {
           </div>
         </section>
       </main>
-      <footer id="footer" className="footer">
-        <div className="copyright">
+      <footer id="footer" className="footer w-100 position-absolute bottom-0">
+        <div className="copyright text-center">
           © Copyright <strong><span>Listify</span></strong>. All Rights Reserved
         </div>
-        <div className="credits">
+        <div className="credits text-center">
           Designed by <a href="https://www.pirabaa.ca/">Pirabaa</a>
         </div>
       </footer>
