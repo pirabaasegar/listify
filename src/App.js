@@ -176,7 +176,7 @@ function App() {
                     <div className='d-flex'>
                       <div className="form-check me-2">
                         <input
-                          className="form-check-input position-relative rounded-circle"
+                          className="form-check-input position-relative rounded-circle bg-transparent"
                           type="checkbox"
                           onChange={() => handleTaskCheck(task.id, 'uncomplete')}
                           checked={false}
@@ -194,7 +194,7 @@ function App() {
                       <div className='d-flex'>
                         <div className="form-check me-2">
                           <input
-                            className="form-check-input position-relative rounded-circle"
+                            className="form-check-input position-relative rounded-circle  bg-transparent"
                             type="checkbox"
                             onChange={() => handleDeleteSampleTask(sampleTask.id)}
                           />
@@ -226,7 +226,7 @@ function App() {
                   <div className='d-flex'>
                     <div className="form-check me-2">
                       <input
-                        className="form-check-input position-relative rounded-circle"
+                        className="form-check-input position-relative rounded-circle  bg-transparent"
                         type="checkbox"
                         onChange={() => handleTaskCheck(task.id, 'completed')}
                         checked={true}

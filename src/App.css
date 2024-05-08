@@ -46,14 +46,6 @@ main {
     box-shadow: 0 !important;
 }
 
-.form-check-input:checked:before {
-    font-family: "bootstrap-icons";
-    content: '\F26E';
-    position: absolute;
-    bottom: -6px;
-    font-size: 15px;
-}
-
 .codeInput {
     border: 0;
     border-bottom: 1px solid #5ec660;
