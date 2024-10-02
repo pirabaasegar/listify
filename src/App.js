@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
 import { supabase } from './client';
-import './App.css';
 
 function App() {
   const [listCode, setListCode] = useState('');
